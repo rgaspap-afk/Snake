@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snake Deluxe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/style.css" />
+</head>
+<body>
+  <div class="hero">
+    <div class="glass">
+      <header class="top-bar">
+        <div class="title">
+          <span class="sparkle">★</span>
+          <div>
+            <p class="eyebrow">Arcade moderno</p>
+            <h1>Snake Deluxe</h1>
+          </div>
+        </div>
+        <div class="controls">
+          <button id="new-game" class="pill">Nueva partida</button>
+          <div class="score">
+            <span>Score</span>
+            <strong id="score">0</strong>
+          </div>
+        </div>
+      </header>
+
+      <main class="layout">
+        <section class="board-shell">
+          <canvas id="board" width="640" height="480" aria-label="Tablero del juego"></canvas>
+          <div id="overlay" class="overlay hidden">
+            <div class="card">
+              <p class="eyebrow">Listo para jugar</p>
+              <h2 id="overlay-title">Pulsa empezar</h2>
+              <p id="overlay-text">Usa las flechas o WASD para mover la serpiente.</p>
+              <button id="start" class="primary">Empezar</button>
+            </div>
+          </div>
+        </section>
+
+        <aside class="sidebar">
+          <div class="panel">
+            <h3>Instrucciones</h3>
+            <ul>
+              <li>W / ↑ : arriba</li>
+              <li>S / ↓ : abajo</li>
+              <li>A / ← : izquierda</li>
+              <li>D / → : derecha</li>
+              <li>Come las luciérnagas luminosas para crecer.</li>
+            </ul>
+          </div>
+          <div class="panel ambient">
+            <h3>Ambiente</h3>
+            <p>Un bosque nocturno, con césped húmedo y luciérnagas brillando. La serpiente deja un leve resplandor al moverse.</p>
+            <div class="legend">
+              <span class="dot snake"></span> Serpiente
+              <span class="dot food"></span> Comida
+            </div>
+          </div>
+        </aside>
+      </main>
+    </div>
+  </div>
+  <script src="src/main.js"></script>
+</body>
+</html>
